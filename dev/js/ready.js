@@ -39,6 +39,8 @@ form.addEventListener('keyup', function (event) {
 form.addEventListener('submit', function (event) {
 	var errors = form.querySelectorAll('.error')
 
+	errors_count = 0;
+
 	for (var i = 0; i < errors.length; i++) { // remove old errors
 	    errors[i].parentElement.parentElement.classList.remove('request_form__field-error');
 	    errors[i].parentElement.parentElement.classList.remove('request_form__field-success');
